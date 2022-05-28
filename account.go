@@ -62,7 +62,7 @@ func (c AccountClient) GetSession(ctx context.Context, options RequestOptions) (
 }
 
 func (c AccountClient) GetUser(ctx context.Context, userID string, options RequestOptions) (*User, *http.Response, error) {
-	req := c.newRequest(ctx, http.MethodGet, "/account/users/"+userID)
+	req := c.newRequest(ctx, http.MethodGet, "/users/"+userID)
 	req.Header.Set("Cookie", options.Cookie)
 	res, err := c.httpClient.Do(req)
 	if err != nil {
