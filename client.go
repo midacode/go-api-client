@@ -1,6 +1,6 @@
 package client
 
-type Client struct {
+type Clients struct {
 	Account AccountClient
 }
 
@@ -16,11 +16,11 @@ type ClientOptions struct {
 	ServerAuth string
 }
 
-func New(options ClientOptions) Client {
+func New(options ClientOptions) Clients {
 	if options.BaseAccount == "" {
 		options.BaseAccount = "http://my-account.account"
 	}
-	return Client{
+	return Clients{
 		Account: NewAccountClient(options),
 	}
 }
