@@ -7,9 +7,9 @@ import (
 )
 
 type Session struct {
-	SessionID string `json:"sessionID"`
-	UserID    string `json:"userID"`
-	IsAdmin   bool   `json:"-"`
+	ID      string `json:"id"`
+	UserID  string `json:"userID"`
+	IsAdmin bool   `json:"-"`
 }
 
 type User struct {
